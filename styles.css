@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@keyframes botar {
+    0%, 100% { bottom: 0; } /* Pelota en el suelo */
+    50% { bottom: 200px; } /* Pelota en la parte superior */
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db; /* Color de la pelota */
+    border-radius: 50%; /* Forma de la pelota */
+    position: relative;
+    animation: botar 3s infinite; /* Animación: nombre, duración, iteraciones */
+    animation-timing-function: ease-in-out; /* Función de tiempo de la animación */
+    animation-iteration-count: infinite; /* Repetir la animación infinitamente */
+}
